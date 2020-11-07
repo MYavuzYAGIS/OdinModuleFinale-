@@ -16,3 +16,15 @@ The best practice is actually 7-1 encapsulation. Creating partial Scss files and
 B) Okay, the framework is done, at least in theory. But what about its usability in practice? The image of `The Odin Project` webpage at the top of the Readme is actually a screenshot from this very repository which uses the framework which is the outcome of the assignment.
 Thus, in theory and practice, I could manage to come up with a grid based CSS framework from scratch and could deploy it when producing the clone of the Odin webpage.
 
+here is a code snippet from the `Gridme` generator
+
+`
+@mixin grid_max($column, $marg){
+    display: inline-block;
+    width: ((100% - (($column - 1) * $marg)) / $column);
+    margin-right: $marg;
+    margin-bottom: $marg;
+    &:nth-child(#{$column}n){
+        margin-right: 0;
+    }
+}` 
